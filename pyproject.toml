@@ -1,6 +1,6 @@
 [project]
 name = "mnist"
-version = "0.5.7"
+version = "0.5.8"
 description = "MNIST"
 authors = [
     {name = "dMario24", email = "data.mario24@gmail.com"},
@@ -19,6 +19,8 @@ dependencies = [
     "scikit-image>=0.24.0",
     "opencv-python>=4.10.0.84",
     "pydot>=3.0.1",
+    "requests>=2.32.3",
+    "jigeum>=1.0.0"
 ]
 
 requires-python = ">=3.11"

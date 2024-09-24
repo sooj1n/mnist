@@ -5,7 +5,7 @@
 groups = ["default", "test", "note"]
 strategy = ["inherit_metadata"]
 lock_version = "4.4.2"
-content_hash = "sha256:8b5fd62c4fefde149ade7915a93aaa3079b82d2f95f06ed1f8ad512cc5ca93e4"
+content_hash = "sha256:35e842ea2e909f435a7721663a8ca2efed18f6f481b50cc8d5199878f50b294b"
 
 [[package]]
 name = "absl-py"
@@ -594,6 +594,20 @@ dependencies = [
 files = [
     {file = "jedi-0.19.1-py2.py3-none-any.whl", hash = "sha256:e983c654fe5c02867aef4cdfce5a2fbb4a50adc0af145f70504238f18ef5e7e0"},
     {file = "jedi-0.19.1.tar.gz", hash = "sha256:cf0496f3651bc65d7174ac1b7d043eff454892c708a87d1b683e57b569927ffd"},
+]
+
+[[package]]
+name = "jigeum"
+version = "1.0.2"
+requires_python = ">=3.9"
+summary = "jigeum seoul now"
+groups = ["default"]
+dependencies = [
+    "pytz>=2024.2",
+]
+files = [
+    {file = "jigeum-1.0.2-py3-none-any.whl", hash = "sha256:63d016eeda646effae819f7ec696d235527674c08c75ba6d634216ff30ebd0df"},
+    {file = "jigeum-1.0.2.tar.gz", hash = "sha256:da976a3b90cc956d7e846dc8b25a7e74a9768cddb78def53490c6451b9bdeb42"},
 ]
 
 [[package]]
