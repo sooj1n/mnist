@@ -1,4 +1,5 @@
 import pymysql.cursors
+import os
 
 def get_conn():
   db_host = os.getenv("DB_IP", "localhost")
