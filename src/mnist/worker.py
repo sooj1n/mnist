@@ -54,7 +54,7 @@ def prediction(file_path,num):
     from keras.models import load_model
     from tensorflow.keras.datasets import mnist
     
-    model = load_model('home/sujin/code/mnist/note/mnist240924.keras')
+    model = load_model('/code/mnist240924.keras')
 
     presult = predict_digit(file_path)
     dml(sql,presult, jigeum.seoul.now(), num)
