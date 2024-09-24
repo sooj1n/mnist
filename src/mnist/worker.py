@@ -72,7 +72,7 @@ def run():
       return 
 
   num = job['num']
-  file_name = job['file_nimage_processingame']
+  file_name = job['file_name']
   file_path = job['file_path']
 
   # STEP 2
