@@ -2,8 +2,9 @@ FROM python:3.11
 
 WORKDIR /code
 
-RUN apt update
-RUN apt install -y cron
+RUN apt-get update && apt-get install -y \
+    cron \
+    libhdf5-dev  # HDF5 개발 파일 추가
 COPY ml-work-cronjob /etc/cron.d/ml-work-cronjob
 RUN crontab /etc/cron.d/ml-work-cronjob
 
