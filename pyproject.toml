@@ -1,6 +1,6 @@
 [project]
 name = "mnist"
-version = "0.1.0"
+version = "0.1.1"
 description = "Default template for PDM package"
 authors = [
     {name = "sooj1n", email = "sujin19371@gmail.com"},
@@ -23,3 +23,4 @@ distribution = true
 
 [project.scripts]
 ml-worker = 'mnist.worker:run'
+ml-noti = 'mnist.worker:send_line_noti'
