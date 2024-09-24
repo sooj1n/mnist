@@ -11,6 +11,6 @@ COPY src/mnist/main.py /code/
 COPY run.sh /code/run.sh
 COPY img /code/images
 
-RUN pip install --no-cache-dir --upgrade git+https://github.com/dMario24/mnist.git@0.5.5
+RUN pip install --no-cache-dir --upgrade git+https://github.com/sooj1n/mnist.git
 
 CMD ["sh", "run.sh"]
