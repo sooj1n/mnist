@@ -23,7 +23,7 @@ async def create_upload_file(file: UploadFile):
         f.write(img)
         
     
-    connection = pymysql.connect(host="127.0.0.1",
+    connection = pymysql.connect(host="172.17.0.1",
                                  user='mnist',
                                  password='1234',
                                  database='mnistdb',
