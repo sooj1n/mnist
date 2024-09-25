@@ -23,11 +23,12 @@ async def file_list():
 
 
 @app.post("/uploadfile/")
-async def create_upload_file(file: UploadFile, label: str = Form(...)):
+async def create_upload_file(file: UploadFile):
     # 파일 저장
     img = await file.read()
     file_name = file.filename
     file_ext = file.content_type.split('/')[-1]
+    label = file_name[0]
 
     # 디렉토리가 없으면 오류, 코드에서 확인 및 만들기 추가
     upload_dir = os.getenv('UPLOAD_DIR','/home/sujin/code/mnist/img')
@@ -40,7 +41,7 @@ async def create_upload_file(file: UploadFile, label: str = Form(...)):
     with open(file_full_path, "wb") as f:
         f.write(img)
 
-    sql = "INSERT INTO image_processing(file_name, file_path, request_time, request_user) VALUES(%s, %s, %s, %s)"
+    sql = "INSERT INTO image_processing(file_name, label file_path, request_time, request_user) VALUES(%s, %s, %s, %s, %s)"
     import jigeum.seoul 
     from mnist.db import dml
     insert_row = dml(sql, file_name, label, file_full_path, jigeum.seoul.now(), 'n23')
@@ -49,7 +50,8 @@ async def create_upload_file(file: UploadFile, label: str = Form(...)):
             "filename": file.filename,
             "content_type": file.content_type,
             "file_full_path": file_full_path,
-            "insert_row_cont": insert_row
+            "insert_row_cont": insert_row,
+            "label" : label
            }
 
 @app.get("/all")
