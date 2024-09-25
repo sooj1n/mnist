@@ -88,3 +88,5 @@ SELECT * FROM image_processing WHERE num = 1;
 
 DELETE FROM image_processing WHERE num = 1;
 ```
+
+## IP
