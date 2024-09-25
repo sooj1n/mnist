@@ -6,7 +6,7 @@ import os
 def get_model():
     # 모델 로드
     f = __file__
-    dir_name = os.path_dirname(f)
+    dir_name = os.path.dirname(f)
     model_path = os.path.join(dir_name,"mnist240924.keras")
     model = load_model(model_path)
 
