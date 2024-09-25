@@ -71,6 +71,6 @@ def send_line_noti(file_name='test', presult='-1'):
     }
     r = requests.post(api, headers=h, data=msg)
     print(r)
-    print("SEND LINE NOTI:" + presult)
+    print(f"SEND LINE NOTI: + {presult}")
 
 
