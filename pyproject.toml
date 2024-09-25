@@ -1,6 +1,6 @@
 [project]
 name = "mnist"
-version = "0.6.0"
+version = "0.6.1"
 description = "MNIST"
 authors = [
     {name = "dMario24", email = "data.mario24@gmail.com"},
@@ -12,7 +12,6 @@ dependencies = [
     "pytz>=2024.2",
     "pillow>=10.4.0",
     "python-multipart>=0.0.9",
-    "tensorflow>=2.16.0",
     "keras>=3.5.0",
     "matplotlib>=3.9.2",
     "scikit-learn>=1.5.2",
@@ -20,10 +19,11 @@ dependencies = [
     "opencv-python>=4.10.0.84",
     "pydot>=3.0.1",
     "requests>=2.32.3",
-    "jigeum>=1.0.0"
+    "jigeum>=1.0.0",
+    "tensorflow>=2.16.2"
 ]
 
-requires-python = ">=3.11"
+requires-python =  ">=3.11"
 readme = "README.md"
 license = {text = "GNU"}
 
@@ -49,3 +49,4 @@ pythonpath = "src"
 [project.scripts]
 ml-worker = 'mnist.worker:run'
 ml-noti = 'mnist.worker:send_line_noti'
+ml-p = 'mnist.worker:prediction'

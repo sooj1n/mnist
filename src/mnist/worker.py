@@ -32,6 +32,7 @@ def prediction(file_path,num):
     """
     
     presult = predict_digit(file_path)
+    print(f"*********************** {presult}   { jigeum.seoul.now()}      {num}")
     dml(sql, presult, jigeum.seoul.now(), num)
     return presult
 
