@@ -5,7 +5,9 @@ import os
 
 def get_model():
     # 모델 로드
-    model_path = os.getenv('MODEL_PATH', '/home/sujin/code/mnist/note/mnist240924.keras')
+    f = __file__
+    dir_name = os.path_dirname(f)
+    model_path = os.path.join(dir_name,"mnist240924.keras")
     model = load_model(model_path)
 
     return model
