@@ -51,6 +51,7 @@ def run():
   file_name = job['file_name']
   file_path = job['file_path']
 
+  print(f" {num}   {file_name}    {file_path}")
   # STEP 2
   # RANDOM 으로 0 ~ 9 중 하나 값을 prediction_result 컬럼에 업데이트
   # 동시에 prediction_model, prediction_time 도 업데이트
